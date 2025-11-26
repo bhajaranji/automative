@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — Stackly</title>
+
+<style>
+  :root {
+    --bg: #071026;
+    --card: #0b1220;
+    --accent: #6C63FF;
+    --accent-2: #2EF7A0;
+    --text: #e6eef8;
+    --muted: #94a3b8;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(180deg, #071026, #071b2b);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 600px;
+    padding: 20px;
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+
+  h1 {
+    font-size: 120px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2.5s infinite ease-in-out;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-top: -20px;
+    color: var(--muted);
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 16px;
+    color: var(--muted);
+  }
+
+  .btn {
+    margin-top: 24px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, var(--accent), #4a3fff);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+  }
+
+  .btn-outline {
+    margin-left: 12px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .btn-outline:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-3px);
+  }
+
+  /* Floating glowing Orbs */
+  .orb {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(108, 99, 255, 0.55), transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: floatOrb 8s infinite linear;
+    z-index: -1;
+  }
+
+  .orb2 {
+    background: radial-gradient(circle, rgba(46, 247, 160, 0.55), transparent 70%);
+    animation-duration: 10s;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes floatOrb {
+    0% { transform: translate(-80px, -40px); }
+    50% { transform: translate(80px, 40px); }
+    100% { transform: translate(-80px, -40px); }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Floating Orbs -->
+<div class="orb"></div>
+<div class="orb orb2"></div>
+
+<div class="container">
+  <h1>404</h1>
+  <h2>Page Not Found</h2>
+  <p>The page you're trying to access doesn't exist or was moved.</p>
+
+  <!-- Buttons -->
+ 
+  <a href="index.html" class="btn btn-outline">Go to Home</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stackly — Header with matching dropdowns</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-wrap container">
+
+      <!-- LEFT: logo -->
+      <div class="left">
+        <!-- uploaded logo path used here -->
+        <img src="assets/images/logo3.webp" alt="Stackly logo" class="brand-logo">
+      </div>
+
+      <!-- CENTER: navigation (desktop) -->
+      <nav class="center" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">Home <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="home2.html">Home 2</a></li>
+            
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">Solutions<span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="restuartment.html">Restaurant Management</a></li>
+              <li><a href="fooddelivery.html">Food Delivery App</a></li>
+              <li><a href="qrmenu.html">Digital QR Menu</a></li>
+              <li><a href="workshopmanagement.html">Workshop Management</a></li>
+              <li><a href="service.html">Service Booking System</a></li>
+              <li><a href="spare.html">Spare Parts Inventory</a></li>
+
+            </ul>
+            
+        
+        </li>
+
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">Pages <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="carerers.html">Careers</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricvay.html">Privacy Policy</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="automotive.html">Automotive</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+  <a class="nav-link" href="dashboard.html">Dashboard</a>
+</li>
+
+
+          
+        </ul>
+      </nav>
+
+      <!-- RIGHT: shop / login (desktop) -->
+      <div class="right">
+        <a href="shop.html" class="btn btn-shop">Shop</a>
+        <a href="login.html" class="btn btn-login">Login</a>
+      </div>
+
+      <!-- Mobile burger (right) -->
+      <button id="burgerBtn" class="burger" aria-label="Open menu" aria-controls="centerMenu" aria-expanded="false">
+        <span class="burger-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CENTERED MOBILE MENU (overlay, scales from center) -->
+  <!-- NOTE: mobile menu contains same nav structure with dropdowns as collapsible lists -->
+  <div id="centerMenu" class="center-menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="center-menu-card" role="document">
+      <button id="closeCenterMenu" class="close-x" aria-label="Close menu">&times;</button>
+
+      <nav class="center-nav" role="navigation" aria-label="Mobile navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-item has-sub">
+            <button class="mobile-link">Home <span class="mobile-arrow">▾</span></button>
+            <ul class="mobile-sub">
+              <li><a href="home2.html">Home 1</a></li>
+             
+            </ul>
+          </li>
+
+<!-- SOLUTIONS DROPDOWN -->
+<li class="mobile-item has-sub">
+  <button class="mobile-link">
+    Solutions <span class="mobile-arrow">▾</span>
+  </button>
+
+  <ul class="mobile-sub">
+    <li><a href="restuartment.html">Restaurant Management</a></li>
+    <li><a href="fooddelivery.html">Food Delivery App</a></li>
+    <li><a href="qrmenu.html">Digital QR Menu</a></li>
+    <li><a href="workshopmanagement.html">Workshop Management</a></li>
+    <li><a href="service.html">Service Booking System</a></li>
+    <li><a href="spare.html">Spare Parts Inventory</a></li>
+  </ul>
+</li>
+
+
+          <li class="mobile-item has-sub">
+            <button class="mobile-link">Pages <span class="mobile-arrow">▾</span></button>
+            <ul class="mobile-sub">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="carerers.html">Careers</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricvay.html">Privacy Policy</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </li>
+
+          <li class="mobile-item"><a href="automotive.html" class="mobile-link">Automotive</a></li>
+          <li class="mobile-item"><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+          <li class="mobile-item">
+  <a href="dashboard.html" class="mobile-link">Dashboard</a>
+</li>
+
+
+
+
+          <!-- SHOP & LOGIN moved inside the mobile menu -->
+          <li class="mobile-item"><a href="shop.html" class="menu-btn shop">Shop</a></li>
+          <li class="mobile-item"><a href="login.html" class="menu-btn login">Login</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <section class="career-hero">
+    <div class="career-left">
+        <h1>Join Our Team at <span>Stackly</span></h1>
+        <p>Innovate. Collaborate. Grow with us.</p>
+
+        <button class="explore-btn" onclick="window.location.href='404page.html'">
+  Explore Roles
+</button>
+
+    </div>
+
+    <div class="career-right">
+        <img src="assets/images/carrres.webp" alt="Team Image">
+    </div>
+</section>
+
+
+
+
+<section class="values-section">
+    <p class="values-subtext">
+        At Stackly, we believe in empowering people through innovation, teamwork, and purpose-driven growth.
+    </p>
+
+    <div class="values-grid">
+
+        <!-- Card 1 -->
+        <div class="value-card">
+            <img src="assets/images/collbrartion.webp" alt="Collaboration">
+            <h3>COLLABORATION</h3>
+            <h4>Collaboration</h4>
+            <p>We work together to solve challenges and celebrate every win as a team.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="value-card">
+            <img src="assets/images/iinovation.webp">
+            <h3>INNOVATION</h3>
+            <h4>Innovation</h4>
+            <p>Constantly pushing the boundaries to create next-generation digital solutions.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="value-card">
+            <img src="assets/images/inclusive.webp">
+            <h3>INCLUSIVITY</h3>
+            <h4>Inclusivity</h4>
+            <p>Diversity is our strength — everyone’s voice matters at Stackly.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="value-card">
+            <img src="assets/images/growth.webp">
+            <h3>GROWTH</h3>
+            <h4>Growth</h4>
+            <p>We nurture personal and professional development at every stage of your journey.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="open-positions">
+    <h2>Open Positions</h2>
+    <p class="open-sub">Explore exciting career opportunities across automotive, food-tech, and development.</p>
+
+    <div class="positions-grid">
+
+        <!-- AUTOMOTIVE INDUSTRY ROLES -->
+        <div class="job-card">
+            <h3>Automotive Technician</h3>
+            <p class="job-location">🚗 Pune, India | Full-Time</p>
+            <p>Maintain and diagnose modern automotive systems across EV and petrol vehicles.</p>
+           <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>EV System Engineer</h3>
+            <p class="job-location">⚡ Bangalore, India | Hybrid</p>
+            <p>Develop and optimize electric vehicle battery, motor, and charging systems.</p>
+            <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>Automotive Quality Inspector</h3>
+            <p class="job-location">🛠️ Chennai, India | Full-Time</p>
+            <p>Perform quality checks on assembly line components and final vehicle testing.</p>
+           <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+
+        <!-- FOOD INDUSTRY ROLES -->
+        <div class="job-card">
+            <h3>Food Delivery Operations Manager</h3>
+            <p class="job-location">🍽️ Hyderabad, India | Full-Time</p>
+            <p>Manage delivery partners, optimize routes, and improve kitchen-to-customer efficiency.</p>
+           <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>Cloud Kitchen Supervisor</h3>
+            <p class="job-location">🔥 Mumbai, India | On-Site</p>
+            <p>Oversee kitchen workflow, coordinate chefs, and maintain hygiene standards.</p>
+          <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>Restaurant Tech Coordinator</h3>
+            <p class="job-location">📡 Delhi, India | Hybrid</p>
+            <p>Implement POS, QR menu, billing, and customer engagement systems for restaurants.</p>
+          <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+
+        <!-- DEVELOPMENT / TECH ROLES -->
+        <div class="job-card">
+            <h3>Frontend Developer</h3>
+            <p class="job-location">💻 Remote | Full-Time</p>
+            <p>Build beautiful UIs using React, Next.js, Tailwind, and modern web technologies.</p>
+       <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>Backend Developer</h3>
+            <p class="job-location">🧩 Bangalore, India | Full-Time</p>
+            <p>Create scalable backend systems using Node.js, Java, Python, and microservices.</p>
+           <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+        <div class="job-card">
+            <h3>DevOps Engineer</h3>
+            <p class="job-location">🚀 Chennai, India | Hybrid</p>
+            <p>Manage CI/CD pipelines, Docker, Kubernetes, AWS, and automated deployments.</p>
+            <button class="apply-btn" onclick="window.location.href='404page.html'">
+  Apply Now
+</button>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+ <!-- SCROLL TO TOP BUTTON -->
+<div id="scrollTopBtn" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
+
+<!-- Footer: Glassmorphism Glow (Food + Automotive) -->
+<footer class="footer-glass">
+  <div class="footer-glass-inner container">
+    <div class="fg-col fg-brand">
+      <!-- replace src with your logo path when ready -->
+      <img src="assets/images/logo3.webp" alt="Stackly logo" class="fg-logo">
+      <p class="fg-tag">Delicious food. Confident driving.</p>
+      <p class="fg-desc">We blend flavourful experiences with trusted automotive care — locally crafted.</p>
+
+      <div class="fg-legal">
+        <small class="muted">Made with care • Sustainable sourcing • Safety-first</small>
+      </div>
+    </div>
+
+    <div class="fg-col fg-nav">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Aboutus</a></li>
+        <li><a href="automotive.html">Automotive</a></li>
+        <li><a href="qrmenu.html">Menu & Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="fg-col fg-contact">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> 123 Stackly Lane, Silicon City</p>
+      <p><strong>Email:</strong> hello@stackly.com</p>
+      <p><strong>Phone:</strong> +1 (234) 567-890</p>
+<div class="fg-socials" aria-label="social links">
+
+  <!-- Twitter / X -->
+  <a href="404page.html" aria-label="Twitter" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path fill="currentColor" d="M22 4.01c-.8.35-1.66.58-2.56.69a4.48 4.48 0 0 0 1.96-2.48 9.03 9.03 0 0 1-2.86 1.1 4.51 4.51 0 0 0-7.78 4.12A12.79 12.79 0 0 1 3.15 3.17a4.48 4.48 0 0 0 1.4 6.03A4.47 4.47 0 0 1 2.8 8.7v.06a4.51 4.51 0 0 0 3.62 4.42 4.52 4.52 0 0 1-2.03.08 4.52 4.52 0 0 0 4.22 3.14A9.05 9.05 0 0 1 2 19.54a12.76 12.76 0 0 0 6.92 2.03c8.3 0 12.84-6.93 12.84-12.94 0-.2 0-.39-.01-.58A9.3 9.3 0 0 0 22 4.01Z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="404page.html" aria-label="LinkedIn" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6V17H8.34M7.17 9.67A1.17 1.17 0 1 0 7.17 7.33A1.17 1.17 0 0 0 7.17 9.67M18 17V13.25C18 11.31 16.69 10.5 15.42 10.5C14.44 10.5 13.78 10.89 13.5 11.39H13.47V10.67H11.25V17H13.59V13.61C13.59 12.86 13.96 12.33 14.64 12.33C15.31 12.33 15.59 12.81 15.59 13.59V17H18Z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="404page.html" aria-label="Instagram" class="s s-orange">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2C4.24 2 2 4.24 2 7V17C2 19.76 4.24 22 7 22H17C19.76 22 22 19.76 22 17V7C22 4.24 19.76 2 17 2H7M17 4C18.65 4 20 5.35 20 7V17C20 18.65 18.65 20 17 20H7C5.35 20 4 18.65 4 17V7C4 5.35 5.35 4 7 4H17M12 7A5 5 0 0 0 7 12A5 5 0 0 0 12 17A5 5 0 0 0 17 12A5 5 0 0 0 12 7M12 9A3 3 0 0 1 15 12A3 3 0 0 1 12 15A3 3 0 0 1 9 12A3 3 0 0 1 12 9M17.5 6A1 1 0 0 1 16.5 7A1 1 0 0 1 15.5 6A1 1 0 0 1 16.5 5A1 1 0 0 1 17.5 6Z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="404page.html" aria-label="Facebook" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2A10 10 0 0 0 2 12C2 17.25 5.66 21.63 10.6 22.8V15.47H8.08V12H10.6V9.75C10.6 7.31 12.18 5.89 14.36 5.89C15.4 5.89 16.49 6.07 16.49 6.07V8.5H15.22C13.97 8.5 13.47 9.28 13.47 10.08V12H16.38L15.93 15.47H13.47V22.8C18.41 21.63 22.07 17.25 22.07 12A10 10 0 0 0 12 2Z"/>
+    </svg>
+  </a>
+
+</div>
+
+    </div>
+
+    <div class="fg-col fg-news">
+      <h4>Newsletter</h4>
+      <p class="muted">Get tasty offers & maintenance tips — twice monthly.</p>
+      <form class="fg-news-form" id="fgNewsForm" action="#" novalidate>
+        <input id="fgEmail" type="email" placeholder="you@example.com" aria-label="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="fgMsg" class="fg-msg" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="footer-glass-bottom">
+    <div class="container">
+      <p>© <span id="fgYear"></span> STACKLY. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <script>
+// Scroll To Top Button - class toggling + keyboard support
+const scrollBtn = document.getElementById("scrollTopBtn");
+if (scrollBtn) {
+  const showAt = 200; // px
+
+  function updateScrollBtn() {
+    if (window.scrollY > showAt) scrollBtn.classList.add("visible");
+    else scrollBtn.classList.remove("visible");
+  }
+
+  // show/hide on scroll
+  window.addEventListener("scroll", updateScrollBtn, { passive: true });
+  // init
+  updateScrollBtn();
+
+  // on click -> smooth scroll to top
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // keyboard: Enter or Space activates it
+  scrollBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      scrollBtn.click();
+    }
+  });
+}
+
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

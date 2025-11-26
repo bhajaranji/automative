@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stackly — Header with matching dropdowns</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-wrap container">
+
+      <!-- LEFT: logo -->
+      <div class="left">
+        <!-- uploaded logo path used here -->
+        <img src="assets/images/logo3.webp" alt="Stackly logo" class="brand-logo">
+      </div>
+
+      <!-- CENTER: navigation (desktop) -->
+      <nav class="center" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">Home <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="home2.html">Home 2</a></li>
+            
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#">Solutions<span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="restuartment.html">Restaurant Management</a></li>
+              <li><a href="fooddelivery.html">Food Delivery App</a></li>
+              <li><a href="qrmenu.html">Digital QR Menu</a></li>
+              <li><a href="workshopmanagement.html">Workshop Management</a></li>
+              <li><a href="service.html">Service Booking System</a></li>
+              <li><a href="spare.html">Spare Parts Inventory</a></li>
+
+            </ul>
+            
+        
+        </li>
+
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">Pages <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="carerers.html">Careers</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricvay.html">Privacy Policy</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="automotive.html">Automotive</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+  <a class="nav-link" href="dashboard.html">Dashboard</a>
+</li>
+
+
+          
+        </ul>
+      </nav>
+
+      <!-- RIGHT: shop / login (desktop) -->
+      <div class="right">
+        <a href="shop.html" class="btn btn-shop">Shop</a>
+        <a href="login.html" class="btn btn-login">Login</a>
+      </div>
+
+      <!-- Mobile burger (right) -->
+      <button id="burgerBtn" class="burger" aria-label="Open menu" aria-controls="centerMenu" aria-expanded="false">
+        <span class="burger-lines"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CENTERED MOBILE MENU (overlay, scales from center) -->
+  <!-- NOTE: mobile menu contains same nav structure with dropdowns as collapsible lists -->
+  <div id="centerMenu" class="center-menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="center-menu-card" role="document">
+      <button id="closeCenterMenu" class="close-x" aria-label="Close menu">&times;</button>
+
+      <nav class="center-nav" role="navigation" aria-label="Mobile navigation">
+        <ul class="mobile-nav-list">
+          <li class="mobile-item has-sub">
+            <button class="mobile-link">Home <span class="mobile-arrow">▾</span></button>
+            <ul class="mobile-sub">
+              <li><a href="home2.html">Home 1</a></li>
+             
+            </ul>
+          </li>
+
+<!-- SOLUTIONS DROPDOWN -->
+<li class="mobile-item has-sub">
+  <button class="mobile-link">
+    Solutions <span class="mobile-arrow">▾</span>
+  </button>
+
+  <ul class="mobile-sub">
+    <li><a href="restuartment.html">Restaurant Management</a></li>
+    <li><a href="fooddelivery.html">Food Delivery App</a></li>
+    <li><a href="qrmenu.html">Digital QR Menu</a></li>
+    <li><a href="workshopmanagement.html">Workshop Management</a></li>
+    <li><a href="service.html">Service Booking System</a></li>
+    <li><a href="spare.html">Spare Parts Inventory</a></li>
+  </ul>
+</li>
+
+
+          <li class="mobile-item has-sub">
+            <button class="mobile-link">Pages <span class="mobile-arrow">▾</span></button>
+            <ul class="mobile-sub">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="carerers.html">Careers</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricvay.html">Privacy Policy</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </li>
+
+          <li class="mobile-item"><a href="automotive.html" class="mobile-link">Automotive</a></li>
+          <li class="mobile-item"><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+          <li class="mobile-item">
+  <a href="dashboard.html" class="mobile-link">Dashboard</a>
+</li>
+
+
+
+
+          <!-- SHOP & LOGIN moved inside the mobile menu -->
+          <li class="mobile-item"><a href="shop.html" class="menu-btn shop">Shop</a></li>
+          <li class="mobile-item"><a href="login.html" class="menu-btn login">Login</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+
+<!-- PRICING SECTION (Automotive + Food Delivery) -->
+<section class="pricing-section">
+  <div class="container">
+    <h2 class="pricing-title">Pricing Plans</h2>
+    <p class="pricing-sub">Choose a plan that fits your business — Automotive or Food Delivery solutions, billed monthly or yearly.</p>
+
+    <!-- Industry tabs -->
+    <div class="pricing-controls">
+      <div class="industry-tabs" role="tablist" aria-label="Industry">
+        <button class="industry-tab active" data-industry="automotive" role="tab" aria-selected="true">Automotive</button>
+        <button class="industry-tab" data-industry="food" role="tab" aria-selected="false">Food Delivery</button>
+      </div>
+
+      <!-- billing toggle -->
+      <div class="billing-toggle" aria-hidden="false">
+        <span class="note">Monthly</span>
+        <button id="billingSwitch" aria-pressed="false" title="Toggle billing">
+          <span class="switch-knob"></span>
+        </button>
+        <span class="note">Yearly <small>(save 15%)</small></span>
+      </div>
+    </div>
+
+    <!-- pricing grid -->
+    <div class="pricing-grid">
+
+      <!-- Automotive plans -->
+      <div class="plans plans-automotive active" data-industry="automotive">
+
+        <article class="plan">
+          <header>
+            <h3>Basic</h3>
+            <div class="price">
+              <span class="amount" data-monthly="49" data-yearly="499">₹49</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">For small garages & service shops</p>
+          </header>
+
+          <ul class="features">
+            <li>Vehicle diagnostics dashboard</li>
+            <li>Basic ECU log viewing</li>
+            <li>Email support</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Start Free Trial</a>
+          </div>
+        </article>
+
+        <article class="plan featured">
+          <header>
+            <h3>Pro</h3>
+            <div class="price">
+              <span class="amount" data-monthly="149" data-yearly="1599">₹149</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">For EV workshops & fleet managers</p>
+          </header>
+
+          <ul class="features">
+            <li>Advanced telemetry & battery metrics</li>
+            <li>OTA update support & alerts</li>
+            <li>Priority support + analytics</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Get Started</a>
+          </div>
+        </article>
+
+        <article class="plan">
+          <header>
+            <h3>Enterprise</h3>
+            <div class="price">
+              <span class="amount" data-monthly="499" data-yearly="5299">₹499</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">For OEMs and large fleets</p>
+          </header>
+
+          <ul class="features">
+            <li>Custom integrations & SLAs</li>
+            <li>On-prem / private cloud options</li>
+            <li>Dedicated engineering support</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Contact Sales</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Food Delivery plans -->
+      <div class="plans plans-food" data-industry="food">
+
+        <article class="plan">
+          <header>
+            <h3>Starter</h3>
+            <div class="price">
+              <span class="amount" data-monthly="29" data-yearly="299">₹29</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">For single cloud kitchens & cafes</p>
+          </header>
+
+          <ul class="features">
+            <li>QR menu + basic POS</li>
+            <li>Order tracking & receipts</li>
+            <li>Email support</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Start Free Trial</a>
+          </div>
+        </article>
+
+        <article class="plan featured">
+          <header>
+            <h3>Growth</h3>
+            <div class="price">
+              <span class="amount" data-monthly="99" data-yearly="1049">₹99</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">For multi-kitchen operations</p>
+          </header>
+
+          <ul class="features">
+            <li>Inventory automation</li>
+            <li>Delivery routing & partner tools</li>
+            <li>Priority support + analytics</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Get Started</a>
+          </div>
+        </article>
+
+        <article class="plan">
+          <header>
+            <h3>Scale</h3>
+            <div class="price">
+              <span class="amount" data-monthly="299" data-yearly="3199">₹299</span>
+              <span class="period">/mo</span>
+            </div>
+            <p class="plan-sub">Enterprise cloud kitchen networks</p>
+          </header>
+
+          <ul class="features">
+            <li>Custom APIs & integrations</li>
+            <li>Fleet management & SLA</li>
+            <li>Dedicated account manager</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a class="btn-primary" href="404page.html">Contact Sales</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* Pricing controls JS: industry tabs + billing toggle */
+(function(){
+  const industryTabs = document.querySelectorAll('.industry-tab');
+  const plansBlocks = document.querySelectorAll('.plans');
+  const billingSwitch = document.getElementById('billingSwitch');
+
+  function showIndustry(ind) {
+    industryTabs.forEach(btn => {
+      const isActive = btn.dataset.industry === ind;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    plansBlocks.forEach(block => {
+      block.classList.toggle('active', block.dataset.industry === ind);
+    });
+    // update prices to current billing
+    updateAllPrices();
+  }
+
+  function isYearly() {
+    return billingSwitch && billingSwitch.getAttribute('aria-pressed') === 'true';
+  }
+
+  function updatePriceElement(el) {
+    const monthly = Number(el.getAttribute('data-monthly'));
+    const yearly = Number(el.getAttribute('data-yearly'));
+    if (isYearly()) {
+      // show yearly divided by 12 with discount already baked in yearly attr
+      const perMonth = Math.round((yearly / 12) * 100) / 100;
+      el.textContent = '₹' + perMonth;
+      el.nextElementSibling && (el.nextElementSibling.textContent = '/mo (billed yearly)');
+    } else {
+      el.textContent = '₹' + monthly;
+      el.nextElementSibling && (el.nextElementSibling.textContent = '/mo');
+    }
+  }
+
+  function updateAllPrices() {
+    const amounts = document.querySelectorAll('.plan .amount');
+    amounts.forEach(updatePriceElement);
+  }
+
+  // tab click
+  industryTabs.forEach(btn => {
+    btn.addEventListener('click', () => showIndustry(btn.dataset.industry));
+  });
+
+  // billing toggle: click toggles yearly/monthly
+  if (billingSwitch) {
+    billingSwitch.addEventListener('click', () => {
+      const currently = billingSwitch.getAttribute('aria-pressed') === 'true';
+      billingSwitch.setAttribute('aria-pressed', (!currently).toString());
+      updateAllPrices();
+    });
+
+    // initialize
+    billingSwitch.setAttribute('aria-pressed', 'false');
+  }
+
+  // initialize show automotive by default
+  showIndustry('automotive');
+})();
+</script>
+
+
+<section class="testimonials-section">
+  <div class="testimonial-track" id="testimonialTrack">
+
+    <!-- 1 -->
+    <div class="testimonial-card">
+      <img src="assets/images/testimonail4.webp">
+      <h3>Ravi Sharma</h3>
+      <p class="role">Cloud Kitchen Owner</p>
+      <blockquote>
+        “Stackly improved our delivery management and reduced delays by 25%.”
+      </blockquote>
+    </div>
+
+    <!-- 2 -->
+    <div class="testimonial-card">
+      <img src="assets/images/testimonial.webp" alt="Person 2">
+      <h3>Priya Menon</h3>
+      <p class="role">EV Diagnostics Expert</p>
+      <blockquote>
+        “The automotive analytics dashboard is extremely accurate and reliable.”
+      </blockquote>
+    </div>
+
+    <!-- 3 -->
+    <div class="testimonial-card">
+      <img src="assets/images/testimonial2.webp" alt="Person 3">
+      <h3>Amit Desai</h3>
+      <p class="role">Fleet Manager</p>
+      <blockquote>
+        “Our fleet downtime reduced significantly thanks to Stackly's tools.”
+      </blockquote>
+    </div>
+
+    <!-- 4 -->
+    <div class="testimonial-card">
+      <img src="assets/images/testimonial3.webp" alt="Person 4">
+      <h3>Sunita Patel</h3>
+      <p class="role">Restaurant Owner</p>
+      <blockquote>
+        “The QR menu and POS system increased our daily orders effortlessly.”
+      </blockquote>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById("testimonialTrack");
+  const cards = document.querySelectorAll(".testimonial-card");
+  let index = 0;
+
+  function moveNext() {
+    index++;
+    if (index >= cards.length) {
+      index = 0;
+    }
+    track.style.transform = `translateX(-${index * (cards[0].offsetWidth + 20)}px)`;
+  }
+
+  setInterval(moveNext, 3000);
+</script>
+
+
+
+
+
+ <!-- SCROLL TO TOP BUTTON -->
+<div id="scrollTopBtn" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
+
+<!-- Footer: Glassmorphism Glow (Food + Automotive) -->
+<footer class="footer-glass">
+  <div class="footer-glass-inner container">
+    <div class="fg-col fg-brand">
+      <!-- replace src with your logo path when ready -->
+      <img src="assets/images/logo3.webp" alt="Stackly logo" class="fg-logo">
+      <p class="fg-tag">Delicious food. Confident driving.</p>
+      <p class="fg-desc">We blend flavourful experiences with trusted automotive care — locally crafted.</p>
+
+      <div class="fg-legal">
+        <small class="muted">Made with care • Sustainable sourcing • Safety-first</small>
+      </div>
+    </div>
+
+    <div class="fg-col fg-nav">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Aboutus</a></li>
+        <li><a href="automotive.html">Automotive</a></li>
+        <li><a href="qrmenu.html">Menu & Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="fg-col fg-contact">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> 123 Stackly Lane, Silicon City</p>
+      <p><strong>Email:</strong> hello@stackly.com</p>
+      <p><strong>Phone:</strong> +1 (234) 567-890</p>
+<div class="fg-socials" aria-label="social links">
+
+  <!-- Twitter / X -->
+  <a href="404page.html" aria-label="Twitter" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path fill="currentColor" d="M22 4.01c-.8.35-1.66.58-2.56.69a4.48 4.48 0 0 0 1.96-2.48 9.03 9.03 0 0 1-2.86 1.1 4.51 4.51 0 0 0-7.78 4.12A12.79 12.79 0 0 1 3.15 3.17a4.48 4.48 0 0 0 1.4 6.03A4.47 4.47 0 0 1 2.8 8.7v.06a4.51 4.51 0 0 0 3.62 4.42 4.52 4.52 0 0 1-2.03.08 4.52 4.52 0 0 0 4.22 3.14A9.05 9.05 0 0 1 2 19.54a12.76 12.76 0 0 0 6.92 2.03c8.3 0 12.84-6.93 12.84-12.94 0-.2 0-.39-.01-.58A9.3 9.3 0 0 0 22 4.01Z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="404page.html" aria-label="LinkedIn" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6V17H8.34M7.17 9.67A1.17 1.17 0 1 0 7.17 7.33A1.17 1.17 0 0 0 7.17 9.67M18 17V13.25C18 11.31 16.69 10.5 15.42 10.5C14.44 10.5 13.78 10.89 13.5 11.39H13.47V10.67H11.25V17H13.59V13.61C13.59 12.86 13.96 12.33 14.64 12.33C15.31 12.33 15.59 12.81 15.59 13.59V17H18Z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="404page.html" aria-label="Instagram" class="s s-orange">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2C4.24 2 2 4.24 2 7V17C2 19.76 4.24 22 7 22H17C19.76 22 22 19.76 22 17V7C22 4.24 19.76 2 17 2H7M17 4C18.65 4 20 5.35 20 7V17C20 18.65 18.65 20 17 20H7C5.35 20 4 18.65 4 17V7C4 5.35 5.35 4 7 4H17M12 7A5 5 0 0 0 7 12A5 5 0 0 0 12 17A5 5 0 0 0 17 12A5 5 0 0 0 12 7M12 9A3 3 0 0 1 15 12A3 3 0 0 1 12 15A3 3 0 0 1 9 12A3 3 0 0 1 12 9M17.5 6A1 1 0 0 1 16.5 7A1 1 0 0 1 15.5 6A1 1 0 0 1 16.5 5A1 1 0 0 1 17.5 6Z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="404page.html" aria-label="Facebook" class="s s-teal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2A10 10 0 0 0 2 12C2 17.25 5.66 21.63 10.6 22.8V15.47H8.08V12H10.6V9.75C10.6 7.31 12.18 5.89 14.36 5.89C15.4 5.89 16.49 6.07 16.49 6.07V8.5H15.22C13.97 8.5 13.47 9.28 13.47 10.08V12H16.38L15.93 15.47H13.47V22.8C18.41 21.63 22.07 17.25 22.07 12A10 10 0 0 0 12 2Z"/>
+    </svg>
+  </a>
+
+</div>
+
+    </div>
+    <div class="fg-col fg-news">
+      <h4>Newsletter</h4>
+      <p class="muted">Get tasty offers & maintenance tips — twice monthly.</p>
+      <form class="fg-news-form" id="fgNewsForm" action="#" novalidate>
+        <input id="fgEmail" type="email" placeholder="you@example.com" aria-label="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="fgMsg" class="fg-msg" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="footer-glass-bottom">
+    <div class="container">
+      <p>© <span id="fgYear"></span> STACKLY. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <script>
+// Scroll To Top Button - class toggling + keyboard support
+const scrollBtn = document.getElementById("scrollTopBtn");
+if (scrollBtn) {
+  const showAt = 200; // px
+
+  function updateScrollBtn() {
+    if (window.scrollY > showAt) scrollBtn.classList.add("visible");
+    else scrollBtn.classList.remove("visible");
+  }
+
+  // show/hide on scroll
+  window.addEventListener("scroll", updateScrollBtn, { passive: true });
+  // init
+  updateScrollBtn();
+
+  // on click -> smooth scroll to top
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // keyboard: Enter or Space activates it
+  scrollBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      scrollBtn.click();
+    }
+  });
+}
+
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
