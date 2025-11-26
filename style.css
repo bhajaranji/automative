@@ -81,6 +81,78 @@ html,body{height:100%;margin:0;background:var(--page-bg);font-family:Inter,syste
 .dropdown-menu a{display:block;padding:10px 12px;color:var(--muted);text-decoration:none;border-radius:8px}
 .dropdown-menu a:hover{background:rgba(108,99,255,0.06)}
 
+
+
+/* make sure the nav item is the positioning context */
+.nav-item {
+  position: relative;
+  display: block;            /* ensures the li covers its contents */
+  /* optional: adjust stacking context for overlapping menus */
+  z-index: 10;
+}
+
+/* base dropdown style (hidden by default, ready for transition) */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;                 /* sit directly below the toggle (no gap) */
+  left: 0;
+  min-width: 220px;
+  background: linear-gradient(180deg,#0b0b0d,#121217);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+
+  /* initial (hidden) visual state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);     /* used for smooth entrance */
+  transition: opacity 180ms ease, transform 220ms cubic-bezier(.2,.9,.28,1), visibility 160ms;
+  pointer-events: none;
+  z-index: 100;                    /* keeps menu above other content */
+}
+
+/* stable show rules:
+   - when hovering the parent (.nav-item)
+   - when keyboard-focus is inside (.nav-item:focus-within)
+   - when hovering the menu itself (so moving into the menu keeps it open)
+*/
+.nav-item:hover > .dropdown-menu,
+.nav-item:focus-within > .dropdown-menu,
+.nav-item > .dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* slight highlight on the toggle when the menu is active (optional) */
+.nav-item:hover > .nav-link,
+.nav-item:focus-within > .nav-link {
+  background: rgba(255,255,255,0.02);
+}
+
+/* dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 8px;
+}
+.dropdown-menu a:hover {
+  background: rgba(108,99,255,0.06);
+  color: var(--text);
+}
+
+/* Accessibility note: ensure the toggle and menu are children of the same .nav-item
+   Example HTML structure expected:
+   <li class="nav-item">
+     <a class="nav-link" href="#">Solutions <span class="arrow">▾</span></a>
+     <ul class="dropdown-menu"> ... </ul>
+   </li>
+*/
+
+
 /* ---------------- BUTTONS (KEEP & FINAL HOVER) -------------- */
 
 /* common button base */
