@@ -298,7 +298,7 @@
     <div class="fg-col fg-news">
       <h4>Newsletter</h4>
       <p class="muted">Get tasty offers & maintenance tips — twice monthly.</p>
-      <form class="fg-news-form" id="fgNewsForm" action="#" novalidate>
+      <form class="fg-news-form" id="fgNewsForm" action="404page.html" novalidate>
         <input id="fgEmail" type="email" placeholder="you@example.com" aria-label="Email" required>
         <button type="submit">Subscribe</button>
       </form>
@@ -346,6 +346,71 @@ if (scrollBtn) {
   });
 }
 
+</script>
+
+
+<script>
+(function () {
+  const form = document.getElementById('fgNewsForm');
+  const emailInput = document.getElementById('fgEmail');
+  const msg = document.getElementById('fgMsg');
+
+  function showMessage(text, type) {
+    msg.textContent = text;
+    msg.classList.remove('error','success','shake');
+    if (type === 'error') msg.classList.add('error','shake');
+    else if (type === 'success') msg.classList.add('success');
+    if (type === 'success') {
+      // clear success text after a short time (optional)
+      setTimeout(() => {
+        msg.textContent = '';
+        msg.classList.remove('success');
+      }, 1800);
+    }
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // stop default so we can validate first
+
+    const value = (emailInput.value || '').trim();
+
+    if (!value) {
+      showMessage('Please enter your email address.', 'error');
+      alert('Please fill the details.');
+      emailInput.focus();
+      return;
+    }
+
+    if (!isValidEmail(value)) {
+      showMessage('Please enter a valid email address (e.g. you@example.com).', 'error');
+      alert('Please provide a valid email address.');
+      emailInput.focus();
+      return;
+    }
+
+    // If valid: show quick success message then submit to the form action (404page.html)
+    showMessage('Thanks — redirecting you now…', 'success');
+
+    // small delay so user sees the message (remove delay if you want immediate redirect)
+    setTimeout(() => {
+      // submit the form programmatically so browser follows the `action` attribute
+      form.submit();
+    }, 300);
+  });
+
+  // Clear error when user types
+  emailInput.addEventListener('input', () => {
+    if (msg.classList.contains('error')) {
+      msg.textContent = '';
+      msg.classList.remove('error','shake');
+    }
+  });
+
+})();
 </script>
 
 
